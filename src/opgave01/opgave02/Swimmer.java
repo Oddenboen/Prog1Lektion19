@@ -1,6 +1,8 @@
-package opgave01.model;
+package opgave01.opgave02;
 
-import java.util.*;
+import opgave01.model.TrainingPlan;
+
+import java.util.ArrayList;
 
 /**
  * Modeling a Swimmer
@@ -10,7 +12,6 @@ public class Swimmer {
     private String club;
     private int yearGroup;
     private ArrayList<Double> lapTimes;
-    private TrainingPlan trainingPlan;
     
     /**
      * Initialize a new swimmer with name, club, yearGroup, and lap times.
@@ -24,11 +25,6 @@ public class Swimmer {
 
    }
 
-   public void setTrainingPlan(TrainingPlan trainingPlan) {
-       if (this.trainingPlan != trainingPlan) {
-           this.trainingPlan = trainingPlan;
-       }
-   }
     /**
      * Return the name of the swimmer
      */
@@ -71,7 +67,4 @@ public class Swimmer {
         return best;
     }
 
-    public int allTrainingHours () {
-        return trainingPlan.getWeeklyWaterHours() + trainingPlan.getWeeklyStrengthHours();
-    }
 }
