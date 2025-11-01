@@ -20,6 +20,12 @@ public class Rental {
     }
 
     public double getPrice() {
-        return -1;
+        double price = 0;
+
+        for (Car car : cars) {
+            price += car.getDayPrice();
+        }
+
+        return price * days;
     }
 }
